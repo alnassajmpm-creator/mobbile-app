@@ -5,7 +5,7 @@ import psycopg2
 # നിങ്ങളുടെ ഒറിജിനൽ Supabase URI ഇവിടെ നൽകുക
 DB_URI = "postgresql://postgres.vneiheoyglbwxlzdstrp:Shamlaayiroor@aws-1-ap-south-1.pooler.supabase.com:6543/postgres"
 
-# നിങ്ങളുടെ ലിസ്റ്റ് ഇവിടെ ചേർത്തിട്ടുണ്ട്
+# നിങ്ങളുടെ ലിസ്റ്റ് ഇവിടെ ചേർത്തിട്ടുണ്ട് 
 PARTICULARS_LIST = [
     "SALARY FROM SCHOOL", "SALARY FROM TUTION", "SALARY FROM ALMAHS", 
     "CHITTY RICEVED", "DONATION RICIEVED", "TRAINING AND COUNSELLING INCOME",
