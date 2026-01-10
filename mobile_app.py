@@ -3,7 +3,7 @@ import psycopg2
 
 # --- DATABASE CONFIG ---
 # നിങ്ങളുടെ ഒറിജിനൽ Supabase URI ഇവിടെ നൽകുക
-DB_URI = "YOUR_SUPABASE_CONNECTION_URI_HERE"
+DB_URI = "postgresql://postgres:Shamlaayiroor5@db.vneiheoyglbwxlzdstrp.supabase.co:5432/postgres"
 
 # നിങ്ങളുടെ ലിസ്റ്റ് ഇവിടെ ചേർത്തിട്ടുണ്ട്
 PARTICULARS_LIST = [
