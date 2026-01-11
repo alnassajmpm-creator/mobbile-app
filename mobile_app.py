@@ -2,7 +2,6 @@ import streamlit as st
 import psycopg2
 
 # --- DATABASE CONFIG ---
-# നിങ്ങളുടെ ഒറിജിനൽ Supabase URI ഇവിടെ നൽകുക
 DB_URI = "postgresql://postgres.vneiheoyglbwxlzdstrp:Shamlaayiroor@aws-1-ap-south-1.pooler.supabase.com:6543/postgres"
 
 # നിങ്ങളുടെ ലിസ്റ്റ് ഇവിടെ ചേർത്തിട്ടുണ്ട് 
