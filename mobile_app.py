@@ -2,7 +2,7 @@ import streamlit as st
 import psycopg2
 
 # --- DATABASE CONFIG ---
-DB_URI = postgresql://"postgres.vneiheoyglbwxlzdstrp:basheer123@@aws-1-ap-south-1.pooler.supabase.com:6543/postgres"
+DB_URI = "postgresql://postgres.vneiheoyglbwxlzdstrp:basheer123@@aws-1-ap-south-1.pooler.supabase.com:6543/postgres"
 
 # നിങ്ങളുടെ ലിസ്റ്റ് ഇവിടെ ചേർത്തിട്ടുണ്ട് 
 PARTICULARS_LIST = [
