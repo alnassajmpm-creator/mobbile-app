@@ -2,9 +2,10 @@ import streamlit as st
 import psycopg2
 
 # --- DATABASE CONFIG ---
-DB_URI = "postgresql://postgres.vneiheoyglbwxlzdstrp:basheer123@@aws-1-ap-south-1.pooler.supabase.com:6543/postgres"
+# ലിങ്ക് കൃത്യമായി ഈ രീതിയിൽ തന്നെ നൽകുക
+DB_URI = "postgresql://postgres.vneiheoyglbwxlzdstrp:basheer123@aws-1-ap-south-1.pooler.supabase.com:6543/postgres"
 
-# നിങ്ങളുടെ ലിസ്റ്റ് ഇവിടെ ചേർത്തിട്ടുണ്ട് 
+# നിങ്ങളുടെ ലിസ്റ്റ്
 PARTICULARS_LIST = [
     "SALARY FROM SCHOOL", "SALARY FROM TUTION", "SALARY FROM ALMAHS", 
     "CHITTY RICEVED", "DONATION RICIEVED", "TRAINING AND COUNSELLING INCOME",
@@ -31,12 +32,14 @@ with st.form("entry_form", clear_on_submit=True):
     
     if st.form_submit_button("SAVE TO CLOUD"):
         try:
-            conn = psycopg2.connect(DB_URI)
+            # ഡാറ്റാബേസിലേക്ക് കണക്ട് ചെയ്യുന്നു
+            conn = psycopg2.connect(DB_URI, sslmode='require')
             cur = conn.cursor()
             cur.execute("INSERT INTO transactions (particulars, category, description, debit, credit, user_name) VALUES (%s, %s, %s, %s, %s, %s)",
                         (particulars, category, description, debit, credit, "India_Mobile"))
             conn.commit()
-            st.success("Saved Successfully!")
+            st.success("Saved Successfully! ✅")
+            cur.close()
             conn.close()
         except Exception as e:
             st.error(f"Error: {e}")
